@@ -39,6 +39,62 @@ html.dark {
   --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
+/* Snapshot Card Items (Guaranteed Contrast in Both Themes) */
+.snapshot-item {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.snapshot-item .item-title {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.snapshot-item .item-desc {
+  color: #475569;
+}
+
+html.dark .snapshot-item {
+  background-color: #1a243b !important;
+  border-color: #2b3956 !important;
+}
+
+html.dark .snapshot-item .item-title {
+  color: #ffffff !important;
+}
+
+html.dark .snapshot-item .item-desc {
+  color: #cbd5e1 !important;
+}
+
+/* Card Headers */
+.project-card-header {
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+html.dark .project-card-header {
+  background-color: #162032 !important;
+  border-bottom: 1px solid #23304b !important;
+}
+
+/* Secondary Action Buttons (Google Drive) */
+.btn-secondary-drive {
+  background-color: rgba(226, 232, 240, 0.8);
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+html.dark .btn-secondary-drive {
+  background-color: #1e293b !important;
+  color: #cbd5e1 !important;
+  border-color: #334155 !important;
+}
+html.dark .btn-secondary-drive:hover {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+}
+
 /* Dark Mode Fallback Utilities */
 html.dark .bg-slate-850,
 html.dark .dark\:bg-slate-850 {
