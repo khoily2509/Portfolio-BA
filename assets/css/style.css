@@ -95,9 +95,13 @@ html.dark .btn-secondary-drive:hover {
   color: #ffffff !important;
 }
 
-/* Dark Mode Fallback Utilities */
+/* Universal Dark Mode Surface & Text Overrides */
+html.dark .bg-slate-50,
+html.dark .bg-slate-100,
+html.dark .bg-slate-200,
 html.dark .bg-slate-850,
-html.dark .dark\:bg-slate-850 {
+html.dark .dark\:bg-slate-850,
+html.dark .dark\:bg-slate-800 {
   background-color: #162032 !important;
 }
 
@@ -106,9 +110,29 @@ html.dark .dark\:bg-slate-950 {
   background-color: #0b0f19 !important;
 }
 
-html.dark .pro-card {
+html.dark .pro-card,
+html.dark .project-card,
+html.dark .modal-content {
   background-color: #131b2e !important;
   border-color: #23304b !important;
+}
+
+html.dark thead {
+  background-color: #162032 !important;
+}
+
+html.dark .project-card-header {
+  background-color: #162032 !important;
+  border-bottom-color: #23304b !important;
+}
+
+/* Ensure headings and titles are crisp and bright in dark mode */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark .dark\:text-white {
+  color: #ffffff !important;
 }
 
 html {
