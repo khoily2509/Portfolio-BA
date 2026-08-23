@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="200" height="240" rx="16" fill="url(#bgGrad)"/>
+  <!-- Body/Suit -->
+  <path d="M20 240 L40 160 L70 170 L100 200 L130 170 L160 160 L180 240 Z" fill="url(#suitGrad)"/>
+  <!-- White Shirt -->
+  <polygon points="85,160 100,195 115,160 100,165" fill="#ffffff"/>
+  <polygon points="100,165 95,195 105,195" fill="#0284c7"/>
+  <!-- Neck -->
+  <rect x="88" y="130" width="24" height="35" fill="url(#skinGrad)" rx="4"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="95" rx="36" ry="44" fill="url(#skinGrad)"/>
+  <!-- Hair -->
+  <path d="M60 85 C60 50, 80 40, 100 40 C125 40, 142 52, 142 85 C142 70, 130 52, 100 52 C75 52, 60 70, 60 85 Z" fill="#1e293b"/>
+  <path d="M62 70 C70 52, 90 45, 115 48 C135 50, 140 60, 140 70 C130 58, 110 52, 85 55 C70 57, 63 65, 62 70 Z" fill="#0f172a"/>
+  <!-- Glasses -->
+  <rect x="74" y="85" width="22" height="16" rx="4" fill="none" stroke="#0284c7" stroke-width="3"/>
+  <rect x="104" y="85" width="22" height="16" rx="4" fill="none" stroke="#0284c7" stroke-width="3"/>
+  <line x1="96" y1="92" x2="104" y2="92" stroke="#0284c7" stroke-width="3"/>
+  <line x1="68" y1="90" x2="74" y2="90" stroke="#0284c7" stroke-width="2"/>
+  <line x1="126" y1="90" x2="132" y2="90" stroke="#0284c7" stroke-width="2"/>
+  <!-- Smile -->
+  <path d="M92 118 Q100 125 108 118" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

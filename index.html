@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lý Minh Khôi | Fresher/Junior Business Analyst Portfolio</title>
+  <meta name="description" content="Portfolio của Lý Minh Khôi - Fresher/Junior Business Analyst. Nền tảng Dược học (Rank: Very Good), kinh nghiệm B2B Sales, TOEIC > 800. Chuyên môn về BRD, SRS, BPMN 2.0, Figma và tối ưu quy trình.">
+  <meta name="author" content="Lý Minh Khôi">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lý Minh Khôi | Fresher/Junior Business Analyst Portfolio">
+  <meta property="og:description" content="Khám phá các Case Studies BA thực chiến: FinTech App, Chuyển đổi số OCOP và Tối ưu hóa quy trình doanh nghiệp B2B.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Utility Active States */
+    .active-nav {
+      color: #0284c7 !important;
+      font-weight: 600;
+    }
+    html.dark .active-nav {
+      color: #38bdf8 !important;
+    }
+    .active-filter {
+      background-color: #0284c7 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px 0 rgba(2, 132, 199, 0.35);
+    }
+    .active-tab {
+      border-color: #0284c7 !important;
+      color: #0284c7 !important;
+      background-color: rgba(14, 165, 233, 0.08);
+    }
+    html.dark .active-tab {
+      border-color: #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+    .inactive-tab {
+      border-color: transparent !important;
+      color: #64748b !important;
+    }
+    html.dark .inactive-tab {
+      color: #94a3b8 !important;
+    }
+    .inactive-tab:hover {
+      color: #0f172a !important;
+    }
+    html.dark .inactive-tab:hover {
+      color: #f8fafc !important;
+    }
+
+    /* Print styling to ensure CV PDF looks exact when printing */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #cv-paper-container, #cv-paper-container * {
+        visibility: visible;
+      }
+      #cv-paper-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-[#0b0f19] text-slate-900 dark:text-slate-100 antialiased selection:bg-sky-500 selection:text-white transition-colors duration-200">
+
+  <!-- ================= FLOATING NAVBAR ================= -->
+  <header class="fixed top-4 inset-x-4 max-w-7xl mx-auto z-40">
+    <nav class="floating-nav px-4 sm:px-6 py-3 rounded-2xl flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center font-bold text-white shadow-md shadow-sky-600/20 text-xs">
+          LK
+        </div>
+        <div>
+          <span class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">Lý Minh Khôi</span>
+          <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">Fresher/Junior Business Analyst</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center gap-6 text-xs font-semibold">
+        <a href="#home" class="nav-link text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Tổng quan</a>
+        <a href="#story" class="nav-link text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Lợi thế & Câu chuyện</a>
+        <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Case Studies (3)</a>
+        <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Kỹ năng chuyên môn</a>
+        <a href="#experience" class="nav-link text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Kinh nghiệm & Học vấn</a>
+      </div>
+
+      <!-- Action Items & Theme Toggle -->
+      <div class="flex items-center gap-2.5">
+        
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" title="Chuyển đổi Sáng / Tối">
+          <i data-lucide="sun" class="theme-icon-sun w-4 h-4 text-amber-400 hidden"></i>
+          <i data-lucide="moon" class="theme-icon-moon w-4 h-4 text-slate-600"></i>
+        </button>
+
+        <!-- View Resume Button -->
+        <button onclick="openModal('resume-modal')" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-200/80 dark:bg-slate-800/80 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700/80 transition-all cursor-pointer">
+          <i data-lucide="file-text" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400"></i>
+          <span>Xem CV (PDF)</span>
+        </button>
+
+        <!-- Direct Contact CTA -->
+        <a href="#contact" class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white shadow-sm shadow-sky-600/20 transition-all">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Liên hệ</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+
+      </div>
+
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-2 p-5 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-800 shadow-xl backdrop-blur-xl space-y-3 text-sm">
+      <a href="#home" class="mobile-nav-link block font-medium text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400">Tổng quan</a>
+      <a href="#story" class="mobile-nav-link block font-medium text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400">Lợi thế & Câu chuyện</a>
+      <a href="#projects" class="mobile-nav-link block font-medium text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400">Case Studies (3)</a>
+      <a href="#skills" class="mobile-nav-link block font-medium text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400">Kỹ năng chuyên môn</a>
+      <a href="#experience" class="mobile-nav-link block font-medium text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400">Kinh nghiệm & Học vấn</a>
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex gap-2">
+        <button onclick="openModal('resume-modal')" class="flex-1 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-center">
+          Xem CV (PDF)
+        </button>
+        <a href="#contact" class="flex-1 py-2 rounded-xl text-xs font-semibold bg-sky-600 text-white text-center">
+          Liên hệ
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="pt-36 pb-16 sm:pt-44 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      
+      <!-- Left Narrative -->
+      <div class="flex-1 space-y-6 text-center lg:text-left">
+        
+        <!-- Live Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-xs font-medium text-slate-700 dark:text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Đang tìm kiếm cơ hội Fresher/Junior BA tại TP.HCM & Remote</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="editorial-title text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white">
+          Lý Minh Khôi
+          <span class="block text-xl sm:text-2xl lg:text-3xl font-semibold text-sky-600 dark:text-sky-400 mt-2">
+            Fresher/Junior Business Analyst • Process & Documentation Specialist
+          </span>
+        </h1>
+
+        <!-- Humanized Intro Text -->
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Tôi là một Business Analyst có tư duy logic được tôi luyện từ <strong>5 năm Dược học (Rank: Very Good)</strong> kết hợp kinh nghiệm <strong>tối ưu hóa quy trình B2B Sales thực tế</strong>. Tôi tập trung vào việc lắng nghe nỗi đau của người dùng, phân tích nguyên nhân gốc rễ và chuyển hóa thành các tài liệu đặc tả phần mềm chuẩn mực (BRD, SRS, BPMN 2.0, User Stories, Figma).
+        </p>
+
+        <!-- Metric Badges Row -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-xl mx-auto lg:mx-0">
+          <div class="p-3.5 rounded-2xl pro-card text-center">
+            <div class="text-xl sm:text-2xl font-bold text-sky-600 dark:text-sky-400">-60%</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 font-medium">Thời gian tra cứu chứng từ</div>
+          </div>
+          <div class="p-3.5 rounded-2xl pro-card text-center">
+            <div class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">+50%</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 font-medium">Tỷ lệ đúng hạn tiến độ (SLA)</div>
+          </div>
+          <div class="p-3.5 rounded-2xl pro-card text-center">
+            <div class="text-xl sm:text-2xl font-bold text-teal-600 dark:text-teal-400">> 800</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 font-medium">TOEIC Tiếng Anh</div>
+          </div>
+          <div class="p-3.5 rounded-2xl pro-card text-center">
+            <div class="text-lg sm:text-xl font-bold text-amber-600 dark:text-amber-400">Very Good</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 font-medium">Tốt nghiệp Dược Sĩ</div>
+          </div>
+        </div>
+
+        <!-- Main Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-3">
+          <a href="#projects" class="flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold bg-sky-600 hover:bg-sky-500 text-white shadow-sm transition-all hover:translate-y-[-1px]">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>Xem 3 Case Studies Thực Tế</span>
+          </a>
+          <button onclick="openModal('resume-modal')" class="flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 transition-all cursor-pointer">
+            <i data-lucide="file-text" class="w-4 h-4 text-sky-600 dark:text-sky-400"></i>
+            <span>Xem & Tải CV (PDF Gốc)</span>
+          </button>
+        </div>
+
+        <!-- Direct Contact quick links (Clean without duplicate TOEIC) -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-5 pt-1 text-xs text-slate-600 dark:text-slate-400">
+          <span class="flex items-center gap-1.5 cursor-pointer hover:text-sky-600 dark:hover:text-sky-400" onclick="copyToClipboard('minhkhoily01@gmail.com', 'Email')">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400"></i>
+            <span>minhkhoily01@gmail.com</span>
+          </span>
+          <span class="flex items-center gap-1.5 cursor-pointer hover:text-teal-600 dark:hover:text-teal-400" onclick="copyToClipboard('0708556236', 'Số điện thoại')">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400"></i>
+            <span>0708 556 236</span>
+          </span>
+          <a href="https://www.linkedin.com/in/l%C3%BDminhkh%C3%B4i/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-[#0a66c2] dark:text-sky-400 hover:underline">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>linkedin.com/in/lýminhkhôi</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Snapshot Card with Portrait Frame (Clean Location) -->
+      <div class="w-full max-w-md">
+        <div class="pro-card p-6 sm:p-7 rounded-3xl space-y-5">
+          
+          <div class="flex items-center gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+            <!-- Portrait Avatar Frame -->
+            <div class="w-20 h-24 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-2 border-sky-500/50 shrink-0 shadow-md">
+              <img src="assets/images/avatar.jpg" onerror="this.src='assets/images/avatar.svg'" alt="Lý Minh Khôi" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="font-bold text-base text-slate-900 dark:text-white">Lý Minh Khôi</div>
+              <div class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-0.5">Fresher/Junior Business Analyst</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1">
+                <i data-lucide="map-pin" class="w-3 h-3 text-sky-600 dark:text-sky-400"></i>
+                <span>TP. Hồ Chí Minh</span>
+              </div>
+              <div class="inline-flex items-center gap-1.5 mt-2 px-2.5 py-0.5 rounded-md text-[10px] font-medium bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span>Sẵn sàng nhận việc</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-850/80 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+              <i data-lucide="file-check-2" class="w-4 h-4 text-sky-600 dark:text-sky-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-semibold text-slate-900 dark:text-slate-200">Tài liệu đặc tả (SRS / BRD):</span>
+                <p class="text-slate-600 dark:text-slate-400 text-[11px] mt-0.5">Biết phân tích In-scope/Out-scope, viết User Stories và tiêu chí Acceptance Criteria (Gherkin format) rõ ràng cho Dev & QA.</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-850/80 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+              <i data-lucide="git-branch" class="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-semibold text-slate-900 dark:text-slate-200">Quy trình BPMN 2.0 & Wireframes:</span>
+                <p class="text-slate-600 dark:text-slate-400 text-[11px] mt-0.5">Mô hình hóa rõ ràng các luồng rẽ nhánh, luồng ngoại lệ (Edge cases) và phác thảo giao diện cơ bản trên Figma.</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-850/80 border border-slate-200/80 dark:border-slate-800 flex items-start gap-3">
+              <i data-lucide="database" class="w-4 h-4 text-teal-600 dark:text-teal-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-semibold text-slate-900 dark:text-slate-200">Dữ liệu & Tối ưu hóa quy trình:</span>
+                <p class="text-slate-600 dark:text-slate-400 text-[11px] mt-0.5">Phân tích khoảng cách AS-IS vs TO-BE, thiết kế bảng theo dõi tự động và chuẩn hóa luồng nghiệp vụ.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CROSS-DOMAIN ADVANTAGE & STORY ================= -->
+  <section id="story" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Top: Transition Story & 4 Principles -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: The Transition Story -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+            <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+            <span>Góc nhìn cá nhân</span>
+          </div>
+          <h2 class="editorial-title text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+            Từ Cử nhân Dược đến con đường Business Analyst
+          </h2>
+          <div class="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p>
+              Nhiều người thường ngạc nhiên khi thấy một người tốt nghiệp ngành Dược lại chuyển hướng sang làm IT Business Analyst. Nhưng đối với tôi, hai công việc này có điểm chung rất lớn: <strong>khả năng nghiên cứu tài liệu kỹ thuật phức tạp, sự cẩn trọng tuyệt đối trong từng chi tiết và tư duy giải quyết vấn đề dựa trên dữ liệu</strong>.
+            </p>
+            <p>
+              Khi làm việc tại Allegens, tôi nhận thấy các phòng ban như Sales, Đăng ký thuốc, Xuất nhập khẩu và Kế toán thường xuyên mất nhiều giờ chỉ để tìm lại một văn bản chứng từ, hoặc lệch số liệu đối soát thanh toán. Thay vì chấp nhận sự bất tiện đó, tôi đã chủ động thiết kế lại cấu trúc tài liệu và xây dựng hệ thống theo dõi tự động trên Google Sheets — giúp cắt giảm tới 60% thời gian tra cứu cho cả công ty.
+            </p>
+            <p>
+              Khoảnh khắc thấy quy trình mình xây dựng giúp mọi người làm việc nhẹ nhàng, chính xác và hiệu quả hơn, tôi nhận ra mình thực sự đam mê công việc của một <strong>Business Analyst</strong>: người lắng nghe nỗi đau của người dùng, tìm ra nguyên nhân gốc rễ và chuyển hóa thành giải pháp phần mềm rõ ràng.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: My Working Approach -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="p-6 sm:p-7 rounded-3xl pro-card space-y-4">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="compass" class="w-4 h-4 text-sky-600 dark:text-sky-400"></i>
+              <span>Cách tôi tiếp cận trong dự án</span>
+            </h3>
+
+            <div class="space-y-3 text-xs">
+              <div class="space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-slate-200">1. Đào sâu nguyên nhân gốc rễ (Root Cause)</div>
+                <p class="text-slate-500 dark:text-slate-400 text-[11px]">Thay vì chỉ ghi chép những gì người dùng yêu cầu, tôi luôn hỏi "Tại sao?" để tìm ra điều người dùng thực sự cần, phân tích được những điểm pain-point.</p>
+              </div>
+
+              <div class="space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-slate-200">2. Rõ ràng và có số liệu cụ thể</div>
+                <p class="text-slate-500 dark:text-slate-400 text-[11px]">Mọi yêu cầu và luồng xử lý đều phải có số liệu, trường hợp biên (Edge cases) và tiêu chí nghiệm thu đều phải miêu tả chi tiết và rõ ràng.</p>
+              </div>
+
+              <div class="space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-slate-200">3. Hình ảnh hóa trước khi viết tài liệu dài</div>
+                <p class="text-slate-500 dark:text-slate-400 text-[11px]">Dùng thành thạo các công cụ AI để tối ưu hóa thời gian phác thảo quy trình công việc hoặc Wireframe chi tiết dễ hiểu để người dùng, đội dev nắm rõ thông tin.</p>
+              </div>
+
+              <div class="space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-slate-200">4. Trách nhiệm đến khi tính năng chạy thực tế</div>
+                <p class="text-slate-500 dark:text-slate-400 text-[11px]">Luôn giữ tinh thần chủ động trong mọi công việc, có kỹ năng chăm sóc khách hàng, khả năng truyền đạt thông tin dễ hiểu và giao tiếp tốt với các đội liên quan để đảm bảo quá trình dự án chạy nhanh.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- WOW-FACTOR 1: Cross-Domain Synergy Matrix (Ma trận lợi thế giao thoa 3 miền) -->
+      <div id="advantage" class="pt-8 border-t border-slate-200 dark:border-slate-800 space-y-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Lợi thế cạnh tranh độc bản</span>
+          </div>
+          <h3 class="editorial-title text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            Ma Trận Lợi Thế Giao Thoa 3 Miền (Cross-Domain Synergy)
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+            Sự kết hợp giữa tư duy khoa học chính xác, sự nhạy bén kinh doanh và phương pháp luận phần mềm chuẩn mực.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Pillar 1: Pharmacy Precision -->
+          <div class="pro-card p-6 rounded-3xl space-y-4 border-t-4 border-t-amber-500 relative overflow-hidden">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/70 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+              <i data-lucide="flask-conical" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Nền Tảng Dược Học</div>
+              <h4 class="text-base font-bold text-slate-900 dark:text-white mt-0.5">Tư Duy Khoa Học & Cẩn Trọng</h4>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              5 năm nghiên cứu Dược điển rèn luyện khả năng đọc hiểu tài liệu kỹ thuật phức tạp và tính chính xác tuyệt đối. Khi viết tài liệu SRS/BRD, tôi luôn rà soát kỹ lưỡng để <strong>không bỏ sót bất kỳ trường hợp biên (Edge cases) hay điểm mơ hồ nào</strong>.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-amber-700 dark:text-amber-300">
+              → Giá trị: Tài liệu đặc tả không kẽ hở cho Dev & QA
+            </div>
+          </div>
+
+          <!-- Pillar 2: B2B Sales Acumen -->
+          <div class="pro-card p-6 rounded-3xl space-y-4 border-t-4 border-t-teal-500 relative overflow-hidden">
+            <div class="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950/70 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold">
+              <i data-lucide="handshake" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Thương Mại & B2B Sales</div>
+              <h4 class="text-base font-bold text-slate-900 dark:text-white mt-0.5">Thấu Cảm Kinh Doanh & Đàm Phán</h4>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Kinh nghiệm trực tiếp làm việc với khách hàng doanh nghiệp và điều phối 4 phòng ban tại Allegens giúp tôi <strong>thấu hiểu bài toán chi phí, thời gian và nỗi đau của người dùng thực tế</strong>, từ đó khơi gợi yêu cầu và quản trị kỳ vọng Stakeholder mượt mà.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-teal-700 dark:text-teal-300">
+              → Giá trị: Đảm bảo giải pháp tạo ra ROI thực tế
+            </div>
+          </div>
+
+          <!-- Pillar 3: BA Methodologies -->
+          <div class="pro-card p-6 rounded-3xl space-y-4 border-t-4 border-t-sky-500 relative overflow-hidden">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950/70 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Phương Pháp Luận BA</div>
+              <h4 class="text-base font-bold text-slate-900 dark:text-white mt-0.5">Chuẩn Hóa Kỹ Thuật Phần Mềm</h4>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Được đào tạo bài bản về mô hình hóa BPMN 2.0, sơ đồ Use Case, thiết kế Wireframe Figma, và soạn thảo User Stories chuẩn Gherkin. Tôi đóng vai trò <strong>cầu nối tin cậy giữa Business và đội ngũ Engineering</strong>.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-sky-700 dark:text-sky-300">
+              → Giá trị: Chuyển giao yêu cầu mượt mà vào Sprint
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ================= FEATURED PROJECTS & CASE STUDIES ================= -->
+  <section id="projects" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+          <span>Dự án thực tế & Đào tạo</span>
+        </div>
+        <h2 class="editorial-title text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Case Studies & Tài liệu BA
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xl">
+          Khám phá chi tiết các bài toán, tài liệu đặc tả SRS/BRD, sơ đồ quy trình BPMN 2.0 và liên kết xem trực tiếp trên Google Drive.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="flex flex-wrap gap-2 p-1 rounded-2xl bg-slate-200/80 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs">
+        <button class="filter-btn active-filter px-4 py-2 rounded-xl font-semibold transition-all cursor-pointer" data-filter="all">
+          Tất cả (3)
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-xl font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all cursor-pointer" data-filter="fintech">
+          FinTech App
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-xl font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all cursor-pointer" data-filter="digital-transformation">
+          Chuyển đổi số OCOP
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-xl font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all cursor-pointer" data-filter="process-improvement">
+          Thực chiến B2B
+        </button>
+      </div>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- ================= CARD 1: FINTECH APP ================= -->
+      <div class="project-card pro-card pro-card-hover rounded-3xl overflow-hidden flex flex-col justify-between" data-category="fintech">
+        <div>
+          <!-- Header Banner -->
+          <div class="p-6 bg-slate-100 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800">
+                FinTech • Mobile App
+              </span>
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Techcamp 2026</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+              "Where Did My Money Go?"
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">App Quản lý Tài chính Cá nhân & Cảnh báo Ngân sách</p>
+          </div>
+
+          <!-- Body -->
+          <div class="p-6 space-y-4 text-xs">
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Giải quyết bài toán kiểm soát chi tiêu phân mảnh của người trẻ bằng giải pháp tự động nhận diện danh mục và kích hoạt cảnh báo thông minh trước khi vượt hạn mức tháng.
+            </p>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+              <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Hiện vật phân tích:</div>
+              <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400 shrink-0"></i>
+                  <span>Tài liệu SRS hoàn chỉnh (FRD, NFR, Data Dictionary)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400 shrink-0"></i>
+                  <span>Sơ đồ quy trình BPMN 2.0 (Threshold Trigger Flow)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400 shrink-0"></i>
+                  <span>User Stories & Tiêu chí nghiệm thu chuẩn Gherkin</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="p-6 pt-0 space-y-2">
+          <button onclick="openModal('project-1-modal')" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-all cursor-pointer">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Xem Chi Tiết Case Study</span>
+          </button>
+          
+          <a href="https://drive.google.com/drive/folders/1c2DPiIcaQc_01zXgPMi7BpM9EAVYgvAj?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-xs font-semibold bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700">
+            <i data-lucide="folder-symlink" class="w-3.5 h-3.5 text-sky-600 dark:text-sky-400"></i>
+            <span>Mở Folder SRS Trên Google Drive</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= CARD 2: DIGITAL TRANSFORMATION OCOP ================= -->
+      <div class="project-card pro-card pro-card-hover rounded-3xl overflow-hidden flex flex-col justify-between" data-category="digital-transformation">
+        <div>
+          <!-- Header Banner -->
+          <div class="p-6 bg-slate-100 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                E-Commerce • OCOP
+              </span>
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Techcamp 2026</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+              Chuyển Đổi Số Tương Ớt Mường Khương
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Website Bán Hàng Trực Tuyến & Quản Lý Đơn Hàng</p>
+          </div>
+
+          <!-- Body -->
+          <div class="p-6 space-y-4 text-xs">
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Khảo sát và số hóa quy trình bán hàng truyền thống của sản phẩm OCOP Lào Cai thành website thương mại điện tử chuyên nghiệp, tự động hóa luồng tiếp nhận đơn và thanh toán QR.
+            </p>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+              <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Hiện vật phân tích:</div>
+              <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0"></i>
+                  <span>Bảng phân tích so sánh quy trình AS-IS vs TO-BE</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0"></i>
+                  <span>Tài liệu BRD (Business Requirements Document)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0"></i>
+                  <span>Wireframe Figma màn hình Checkout 1 trang</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="p-6 pt-0 space-y-2">
+          <button onclick="openModal('project-2-modal')" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition-all cursor-pointer">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Xem Chi Tiết Case Study</span>
+          </button>
+
+          <a href="https://drive.google.com/drive/folders/1-1cGBe9FQB4aUWKWObhh_9TjrG2nDIIz?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-xs font-semibold bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700">
+            <i data-lucide="folder-symlink" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+            <span>Mở Folder BRD & Figma Trên Google Drive</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= CARD 3: ALLEGENS B2B OPTIMIZATION ================= -->
+      <div class="project-card pro-card pro-card-hover rounded-3xl overflow-hidden flex flex-col justify-between" data-category="process-improvement">
+        <div>
+          <!-- Header Banner -->
+          <div class="p-6 bg-slate-100 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+                Thực Chiến Doanh Nghiệp
+              </span>
+              <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400">03/2025 – Hiện tại</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+              Tối Ưu Quy Trình Tại Allegens
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Chuẩn Hóa Chứng Từ & Đồng Bộ Dữ Liệu Thanh Toán</p>
+          </div>
+
+          <!-- Body -->
+          <div class="p-6 space-y-4 text-xs">
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Giải quyết bài toán phân mảnh dữ liệu giữa 4 phòng ban: Sales, Đăng ký thuốc, Xuất nhập khẩu và Kế toán tại công ty thương mại Dược phẩm B2B.
+            </p>
+
+            <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+              <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Kết quả đo lường:</div>
+              <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="font-bold text-teal-600 dark:text-teal-400">-60%</span>
+                  <span>Thời gian tra cứu chứng từ (COA, GMP, Hợp đồng)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="font-bold text-teal-600 dark:text-teal-400">+50%</span>
+                  <span>Tỷ lệ đúng hạn tiến độ (SLA)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="font-bold text-teal-600 dark:text-teal-400">100%</span>
+                  <span>Đồng bộ dữ liệu thanh toán API & Xuất Nhập Khẩu</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="p-6 pt-0 space-y-2">
+          <button onclick="openModal('project-3-modal')" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold bg-teal-600 hover:bg-teal-500 text-white transition-all cursor-pointer">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Xem Chi Tiết Bài Toán Thực Tế</span>
+          </button>
+
+          <a href="https://drive.google.com/drive/folders/1NGdH3uWIufpTV3VHRxWkOGoNp-pWtpaq?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-xs font-semibold bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700">
+            <i data-lucide="folder-symlink" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400"></i>
+            <span>Mở Tài Liệu & Sheets Trên Google Drive</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SKILLS & INTERACTIVE ARTIFACT SIMULATOR ================= -->
+  <section id="skills" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Top: 4 Skill Categories -->
+      <div class="space-y-10">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+            <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+            <span>Năng lực thực thi</span>
+          </div>
+          <h2 class="editorial-title text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+            Kỹ Năng Chuyên Môn & Công Cụ
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- BA Core -->
+          <div class="pro-card p-6 rounded-2xl space-y-3.5">
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400">
+                <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Nghiệp Vụ BA (Core)</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li>• Soạn thảo BRD / SRS Specification</li>
+              <li>• Viết User Stories & Acceptance Criteria (Gherkin)</li>
+              <li>• Phân tích khoảng cách (AS-IS / TO-BE Gap Analysis)</li>
+              <li>• Thiết lập bảng Ma trận Yêu cầu (RTM)</li>
+              <li>• Khơi gợi yêu cầu (Requirement Elicitation)</li>
+            </ul>
+          </div>
+
+          <!-- Modeling & UI -->
+          <div class="pro-card p-6 rounded-2xl space-y-3.5">
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
+                <i data-lucide="workflow" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Mô Hình Hóa & UI</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li>• Chuẩn mô hình hóa BPMN 2.0</li>
+              <li>• Thiết kế Wireframes trên Figma</li>
+              <li>• Sơ đồ Use Case & Activity Diagram</li>
+              <li>• Sử dụng thành thạo Draw.io, Lucidchart, Miro</li>
+              <li>• Bản đồ hành trình người dùng (User Journey)</li>
+            </ul>
+          </div>
+
+          <!-- Data & Tools -->
+          <div class="pro-card p-6 rounded-2xl space-y-3.5">
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-600 dark:text-teal-400">
+                <i data-lucide="database" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Công Cụ & Dữ Liệu</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li>• Quản lý Backlog & Sprint trên Jira / Trello</li>
+              <li>• Tài liệu hóa trên Confluence & Notion</li>
+              <li>• Google Sheets nâng cao (VLOOKUP, Pivot, Apps Script)</li>
+              <li>• Thiết kế cấu trúc bảng dữ liệu (Data Dictionary)</li>
+              <li>• Phân tích luồng dữ liệu (Data Flow Diagrams)</li>
+            </ul>
+          </div>
+
+          <!-- Communication & Domain -->
+          <div class="pro-card p-6 rounded-2xl space-y-3.5">
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400">
+                <i data-lucide="award" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Thế Mạnh Đặc Thù</h3>
+            </div>
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+              <li>• <strong>Tiếng Anh TOEIC > 800</strong> (Làm việc trực tiếp đối tác nước ngoài)</li>
+              <li>• Hiểu sâu Domain Dược phẩm, Y tế, Chuỗi cung ứng B2B</li>
+              <li>• Kỹ năng đàm phán & quản trị kỳ vọng Stakeholder</li>
+              <li>• Thấu hiểu bài toán kinh doanh từ trải nghiệm Sales thực tế</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= EXPERIENCE & EDUCATION ================= -->
+  <section id="experience" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <div class="text-center max-w-2xl mx-auto space-y-2">
+      <div class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+        <i data-lucide="history" class="w-3.5 h-3.5"></i>
+        <span>Lộ trình phát triển</span>
+      </div>
+      <h2 class="editorial-title text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+        Kinh Nghiệm & Học Vấn
+      </h2>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-6">
+      
+      <!-- Item 1: Allegens -->
+      <div class="pro-card p-6 sm:p-8 rounded-3xl space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 dark:bg-teal-950/70 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+            03/2025 – Hiện tại
+          </span>
+          <span class="text-xs text-slate-500 dark:text-slate-400">TP. Hồ Chí Minh</span>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">B2B Sales Executive (Process Improvement)</h3>
+        <h4 class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Công ty TNHH Allegens (Allegens Co., Ltd.)</h4>
+        <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 pt-2 leading-relaxed list-disc pl-4">
+          <li>Thiết kế lại cấu trúc quản lý chứng từ nội bộ, chuẩn hóa quy ước lưu trữ dữ liệu giúp <strong>cắt giảm 60% thời gian tra cứu</strong> cho toàn bộ phòng ban.</li>
+          <li>Xây dựng hệ thống theo dõi thanh toán tự động trên Google Sheets, đồng bộ số liệu giữa team phụ trách API và team Xuất Nhập Khẩu.</li>
+          <li>Chuẩn hóa quy trình bàn giao công việc liên phòng ban, <strong>nâng tỷ lệ hoàn thành đúng hạn (on-time completion) lên 50%</strong>.</li>
+          <li>Làm việc trực tiếp với đối tác quốc tế trong các chuyến thăm on-site và điều phối tiến độ đơn hàng đa bộ phận.</li>
+        </ul>
+      </div>
+
+      <!-- Item 2: Techcamp -->
+      <div class="pro-card p-6 sm:p-8 rounded-3xl space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 dark:bg-indigo-950/70 text-indigo-800 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+            04/2026 – Hiện tại
+          </span>
+          <span class="text-xs text-slate-500 dark:text-slate-400">Hands-on Program</span>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Chương Trình Đào Tạo Business Analyst Chuyên Nghiệp</h3>
+        <h4 class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Techcamp Co., Ltd.</h4>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed pt-1">
+          Hoàn thành 2 dự án thực chiến: Phân tích & Viết tài liệu đặc tả SRS cho ứng dụng FinTech <em>"Where Did My Money Go?"</em> và Lập tài liệu BRD/Figma cho Chuyển đổi số sản phẩm OCOP <em>Tương ớt Mường Khương</em>.
+        </p>
+      </div>
+
+      <!-- Item 3: University -->
+      <div class="pro-card p-6 sm:p-8 rounded-3xl space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 dark:bg-sky-950/70 text-sky-800 dark:text-sky-300 border border-sky-200 dark:border-sky-800">
+            2019 – 2024
+          </span>
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400">Rank: Very Good</span>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Dược Sĩ Đại Học (Bachelor of Pharmacy)</h3>
+        <h4 class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Đại học Nguyễn Tất Thành</h4>
+        <div class="flex flex-wrap items-center gap-4 text-xs text-slate-600 dark:text-slate-300 pt-1">
+          <span><strong>Xếp loại tốt nghiệp:</strong> Rank: Very Good (Tốt nghiệp loại Giỏi)</span>
+          <span>•</span>
+          <span><strong>Chứng chỉ Tiếng Anh:</strong> TOEIC > 800</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PERSONAL STATEMENT & WORK ETHICS ================= -->
+  <section class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pro-card p-8 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5 border border-sky-500/30 shadow-lg">
+      <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 mx-auto flex items-center justify-center">
+        <i data-lucide="quote" class="w-6 h-6"></i>
+      </div>
+      <blockquote class="text-sm sm:text-base lg:text-lg font-medium text-slate-800 dark:text-slate-200 max-w-3xl mx-auto leading-relaxed">
+        "Là một Fresher/Junior Business Analyst, tôi không chỉ nắm vững các kỹ năng vẽ sơ đồ hay viết tài liệu đặc tả, mà còn là <strong>tinh thần trách nhiệm cao trong từng giai đoạn, tư duy phân tích quy trình kinh doanh và tinh thần chủ động trong mọi tiến độ</strong> để biến mọi ý tưởng kinh doanh thành sản phẩm thực tế chất lượng cao."
+      </blockquote>
+      <div class="pt-2">
+        <div class="font-bold text-base text-slate-900 dark:text-white">Lý Minh Khôi</div>
+        <div class="text-xs text-sky-600 dark:text-sky-400 font-semibold">Fresher/Junior Business Analyst • Passionate & Driven</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= CONTACT & CONNECT ================= -->
+  <section id="contact" class="py-20 bg-slate-100/70 dark:bg-slate-900/60 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-widest">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>Liên hệ tuyển dụng</span>
+        </div>
+        <h2 class="editorial-title text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Sẵn Sàng Trao Đổi Về Cơ Hội Phù Hợp
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
+          Tôi rất mong muốn được đóng góp năng lực phân tích, tinh thần trách nhiệm và tư duy quy trình vào đội ngũ của quý công ty.
+        </p>
+      </div>
+
+      <!-- Contact Options Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+        
+        <!-- Email -->
+        <div class="pro-card p-5 rounded-2xl hover:border-sky-500 transition-all cursor-pointer group" onclick="copyToClipboard('minhkhoily01@gmail.com', 'Email')">
+          <div class="w-9 h-9 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-3">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Gửi Email trực tiếp</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-slate-100 mt-0.5 truncate">minhkhoily01@gmail.com</div>
+          <div class="text-[10px] text-sky-600 dark:text-sky-400 font-medium mt-2 flex items-center gap-1">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i> Nhấp để sao chép
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="pro-card p-5 rounded-2xl hover:border-teal-500 transition-all cursor-pointer group" onclick="copyToClipboard('0708556236', 'Số điện thoại')">
+          <div class="w-9 h-9 rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-3">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Gọi điện thoại / Zalo</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-slate-100 mt-0.5">0708 556 236</div>
+          <div class="text-[10px] text-teal-600 dark:text-teal-400 font-medium mt-2 flex items-center gap-1">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i> Nhấp để sao chép
+          </div>
+        </div>
+
+        <!-- LinkedIn (Correct URL with Guaranteed SVG Logo) -->
+        <a href="https://www.linkedin.com/in/l%C3%BDminhkh%C3%B4i/" target="_blank" rel="noopener noreferrer" class="pro-card p-5 rounded-2xl hover:border-indigo-500 transition-all block group">
+          <div class="w-9 h-9 rounded-xl bg-[#0a66c2]/10 text-[#0a66c2] dark:text-sky-400 flex items-center justify-center mb-3">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Trang LinkedIn cá nhân</div>
+          <div class="text-xs font-bold text-slate-900 dark:text-slate-100 mt-0.5 truncate">linkedin.com/in/lýminhkhôi</div>
+          <div class="text-[10px] text-[#0a66c2] dark:text-sky-400 font-medium mt-2 flex items-center gap-1">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Mở trang cá nhân
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Dual-Action CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3.5 pt-2">
+        <a href="mailto:minhkhoily01@gmail.com?subject=Trao%20%C4%91%E1%BB%95i%20c%C6%A1%20h%E1%BB%99i%20Fresher%2FJunior%20Business%20Analyst&body=Ch%C3%A0o%20Kh%C3%B4i%2C%0A%0AT%C3%B4i%20%C4%91%C3%A3%20xem%20qua%20portfolio%20c%E1%BB%A7a%20b%E1%BA%A1n%20v%C3%A0%20mu%E1%BB%91n%20trao%20%C4%91%E1%BB%95i%20v%E1%BB%81%20v%E1%BB%8B%20tr%C3%AD%20Fresher%2FJunior%20BA%3A" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold bg-sky-600 hover:bg-sky-500 text-white shadow-md shadow-sky-600/20 transition-all hover:translate-y-[-1px] cursor-pointer">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Gửi Email Cho Khôi</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/l%C3%BDminhkh%C3%B4i/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 transition-all hover:translate-y-[-1px] cursor-pointer">
+          <svg class="w-4 h-4 fill-current text-[#0a66c2] dark:text-sky-400" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>Kết Nối Trên LinkedIn</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-8 bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-850 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © <span id="current-year">2026</span> <strong class="text-slate-700 dark:text-slate-300">Lý Minh Khôi</strong>. Fresher/Junior Business Analyst Portfolio.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#home" class="hover:text-slate-700 dark:hover:text-slate-300 transition-colors">Về đầu trang</a>
+        <a href="https://www.linkedin.com/in/l%C3%BDminhkh%C3%B4i/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">LinkedIn</a>
+        <button onclick="openModal('resume-modal')" class="hover:text-slate-700 dark:hover:text-slate-300 transition-colors cursor-pointer">Xem CV (PDF)</button>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: CASE STUDY 1 — FINTECH APP (SRS & BPMN)                            -->
+  <!-- ========================================================================= -->
+  <div id="project-1-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+    <div class="modal-content modal-enter w-full max-w-4xl max-h-[90vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 rounded-3xl overflow-hidden flex flex-col shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="p-6 bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold">
+            <i data-lucide="wallet" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Case Study: "Where Did My Money Go?"</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Ứng dụng Quản lý Tài chính Cá nhân • Đặc tả SRS & Quy trình BPMN 2.0</p>
+          </div>
+        </div>
+        <button onclick="closeModal('project-1-modal')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Sub Tabs -->
+      <div class="flex items-center gap-2 px-6 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0 overflow-x-auto py-2">
+        <button onclick="switchCaseTab(this, 'p1-tab-overview')" class="case-tab-btn active-tab px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer">
+          Tổng quan & Vấn đề
+        </button>
+        <button onclick="switchCaseTab(this, 'p1-tab-bpmn')" class="case-tab-btn inactive-tab px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer">
+          Sơ đồ BPMN 2.0
+        </button>
+        <button onclick="switchCaseTab(this, 'p1-tab-srs')" class="case-tab-btn inactive-tab px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer">
+          Bảng Yêu cầu SRS
+        </button>
+        <button onclick="switchCaseTab(this, 'p1-tab-stories')" class="case-tab-btn inactive-tab px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer">
+          User Stories & AC (Gherkin)
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-6 text-slate-700 dark:text-slate-300 text-xs sm:text-sm">
+        
+        <!-- Google Drive Direct Link Banner -->
+        <div class="p-4 rounded-2xl bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="folder-check" class="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0"></i>
+            <div>
+              <div class="font-bold text-slate-900 dark:text-white">Tài liệu dự án hoàn chỉnh trên Google Drive</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">Xem file Word/PDF đặc tả chi tiết, bảng thuật ngữ và các sơ đồ gốc.</div>
+            </div>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1c2DPiIcaQc_01zXgPMi7BpM9EAVYgvAj?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white shrink-0 shadow-sm">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Mở Trên Google Drive</span>
+          </a>
+        </div>
+
+        <!-- Tab 1: Overview -->
+        <div id="p1-tab-overview" class="case-tab-pane space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <div class="text-slate-500 dark:text-slate-400 text-xs">Vai trò</div>
+              <div class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white mt-0.5">Lead Business Analyst</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <div class="text-slate-500 dark:text-slate-400 text-xs">Mục tiêu</div>
+              <div class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white mt-0.5">Cảnh báo chi tiêu tự động</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <div class="text-slate-500 dark:text-slate-400 text-xs">Đối tượng</div>
+              <div class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white mt-0.5">Gen Z & Millennials (18-35)</div>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">1. Bối cảnh & Vấn đề thực tế</h4>
+            <p class="leading-relaxed text-slate-600 dark:text-slate-300">
+              Đề tài này xuất phát từ chính khó khăn của bản thân tôi và các bạn trẻ khi bắt đầu đi làm: thu nhập ổn định nhưng luôn rơi vào tình trạng "rỗng ví" vào cuối tháng vì thói quen chi tiêu không được kiểm soát. Các app tài chính hiện nay quá rườm rà ở khâu nhập liệu hoặc chỉ báo cáo khi tiền đã tiêu hết.
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">2. Giải pháp phân tích của BA</h4>
+            <p class="leading-relaxed text-slate-600 dark:text-slate-300">
+              Tôi tập trung vào tính năng <strong>Cảnh báo ngân sách chủ động (Proactive Budget Alerts)</strong>: hệ thống tự động kiểm tra tỷ lệ chi tiêu so với hạn mức danh mục ngay khi giao dịch được tạo, gửi thông báo đẩy khi chạm mốc 80% để người dùng kịp thời phanh lại.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tab 2: BPMN Flow -->
+        <div id="p1-tab-bpmn" class="case-tab-pane hidden space-y-4">
+          <div class="space-y-1">
+            <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Sơ đồ BPMN 2.0: Luồng Ghi nhận Chi tiêu & Cảnh báo Ngân sách</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Luồng xử lý tự động khi người dùng tạo mới giao dịch chi tiêu:</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 overflow-x-auto">
+            <div class="min-w-[620px] flex items-center justify-between gap-3 text-center">
+              
+              <div class="flex-1 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
+                <div class="text-[10px] font-mono text-sky-600 dark:text-sky-400 font-bold">Start Event</div>
+                <div class="font-bold text-xs text-slate-900 dark:text-white mt-0.5">Nhập Chi Tiêu</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Tiền, Danh mục, Ghi chú</div>
+              </div>
+
+              <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 shrink-0"></i>
+
+              <div class="flex-1 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
+                <div class="text-[10px] font-mono text-indigo-600 dark:text-indigo-400 font-bold">System Task</div>
+                <div class="font-bold text-xs text-slate-900 dark:text-white mt-0.5">Tính lại Tổng Chi</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Cập nhật số dư ví</div>
+              </div>
+
+              <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 shrink-0"></i>
+
+              <div class="flex-1 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700">
+                <div class="text-[10px] font-mono text-amber-600 dark:text-amber-400 font-bold">Gateway (Condition)</div>
+                <div class="font-bold text-xs text-amber-900 dark:text-amber-200 mt-0.5">Đạt >= 80% Ngân sách?</div>
+                <div class="text-[10px] text-amber-700 dark:text-amber-400">Điều kiện rẽ nhánh</div>
+              </div>
+
+              <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 shrink-0"></i>
+
+              <div class="flex-1 p-3 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-300 dark:border-rose-700">
+                <div class="text-[10px] font-mono text-rose-600 dark:text-rose-400 font-bold">Action / End</div>
+                <div class="font-bold text-xs text-rose-900 dark:text-rose-200 mt-0.5">Gửi Push Alert</div>
+                <div class="text-[10px] text-rose-700 dark:text-rose-400">Báo động bội chi</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: SRS Requirements Table -->
+        <div id="p1-tab-srs" class="case-tab-pane hidden space-y-4">
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-300 font-semibold border-b border-slate-200 dark:border-slate-800">
+                <tr>
+                  <th class="p-3 w-20">Req ID</th>
+                  <th class="p-3">Tên chức năng</th>
+                  <th class="p-3">Mô tả đặc tả (Functional Specification)</th>
+                  <th class="p-3 w-24">Mức ưu tiên</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr>
+                  <td class="p-3 font-mono font-bold text-sky-600 dark:text-sky-400">FR-01</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">Ghi nhận giao dịch</td>
+                  <td class="p-3">Cho phép tạo mới khoản thu/chi; gắn thẻ danh mục và đính kèm hình ảnh hóa đơn.</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-400 font-semibold">High</span></td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-mono font-bold text-sky-600 dark:text-sky-400">FR-02</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">Thiết lập hạn mức</td>
+                  <td class="p-3">Cài đặt ngân sách tháng theo từng danh mục (Ăn uống, Giải trí, Hóa đơn).</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-400 font-semibold">High</span></td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-mono font-bold text-sky-600 dark:text-sky-400">FR-03</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">Cảnh báo thông minh</td>
+                  <td class="p-3">Kích hoạt Push Notification tức thì khi tổng chi đạt mốc 80% và 100% ngân sách.</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-400 font-semibold">High</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 4: User Story -->
+        <div id="p1-tab-stories" class="case-tab-pane hidden space-y-4">
+          <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-3 font-mono text-xs">
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold">US-03: Cảnh báo chi tiêu chạm ngưỡng ngân sách</div>
+            <div class="text-slate-800 dark:text-slate-200"><strong>As a</strong> Người dùng ứng dụng tài chính,</div>
+            <div class="text-slate-800 dark:text-slate-200"><strong>I want to</strong> nhận thông báo cảnh báo tức thì khi chi tiêu một danh mục đạt từ 80% ngân sách tháng,</div>
+            <div class="text-slate-800 dark:text-slate-200"><strong>So that</strong> tôi có thể điều chỉnh và ngừng chi tiêu trước khi bị thâm hụt tài chính.</div>
+            
+            <div class="pt-2 text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+              <strong>Scenario 1: Kích hoạt cảnh báo 80% (Gherkin format):</strong><br>
+              • <strong>Given</strong> Danh mục "Ăn uống" có ngân sách 5.000.000đ và tổng chi hiện tại là 3.900.000đ.<br>
+              • <strong>When</strong> Người dùng nhập thêm giao dịch 200.000đ (tổng thành 4.100.000đ - đạt 82%).<br>
+              • <strong>Then</strong> Hệ thống lưu giao dịch và gửi Push Notification: <em>"Cảnh báo: Bạn đã chi 82% ngân sách Ăn uống tháng này!"</em>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <a href="https://drive.google.com/drive/folders/1c2DPiIcaQc_01zXgPMi7BpM9EAVYgvAj?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+          <i data-lucide="folder-symlink" class="w-3.5 h-3.5"></i> Mở folder Drive dự án
+        </a>
+        <button onclick="closeModal('project-1-modal')" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 cursor-pointer">
+          Đóng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: CASE STUDY 2 — TUONG OT MUONG KHUONG                               -->
+  <!-- ========================================================================= -->
+  <div id="project-2-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+    <div class="modal-content modal-enter w-full max-w-4xl max-h-[90vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 rounded-3xl overflow-hidden flex flex-col shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="p-6 bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Case Study: Chuyển Đổi Số Tương Ớt Mường Khương</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Đặc sản OCOP • Phân tích AS-IS vs TO-BE & Tài liệu BRD</p>
+          </div>
+        </div>
+        <button onclick="closeModal('project-2-modal')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Sub Tabs -->
+      <div class="flex items-center gap-2 px-6 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0 overflow-x-auto py-2">
+        <button onclick="switchCaseTab(this, 'p2-tab-overview')" class="case-tab-btn active-tab px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer">
+          Bài toán kinh doanh
+        </button>
+        <button onclick="switchCaseTab(this, 'p2-tab-asis')" class="case-tab-btn inactive-tab px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer">
+          So sánh AS-IS vs TO-BE
+        </button>
+        <button onclick="switchCaseTab(this, 'p2-tab-brd')" class="case-tab-btn inactive-tab px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer">
+          Quy tắc nghiệp vụ BRD
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-6 text-slate-700 dark:text-slate-300 text-xs sm:text-sm">
+        
+        <!-- Google Drive Direct Link Banner -->
+        <div class="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="folder-check" class="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0"></i>
+            <div>
+              <div class="font-bold text-slate-900 dark:text-white">Tài liệu BRD & Bản thiết kế Figma trên Google Drive</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">Xem file tài liệu hoàn chỉnh, scope dự án và link prototype Figma.</div>
+            </div>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1-1cGBe9FQB4aUWKWObhh_9TjrG2nDIIz?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shrink-0 shadow-sm">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Mở Trên Google Drive</span>
+          </a>
+        </div>
+
+        <!-- Tab 1: Overview -->
+        <div id="p2-tab-overview" class="case-tab-pane space-y-4">
+          <div class="space-y-2">
+            <h4 class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">1. Khảo sát thực tế</h4>
+            <p class="leading-relaxed text-slate-600 dark:text-slate-300">
+              Khách hàng thành thị rất yêu thích nông sản đặc sản vùng cao nhưng e ngại hàng nhái và phiền toái khi đặt hàng qua tin nhắn Zalo cá nhân. Việc thiếu kênh bán hàng số khiến hợp tác xã vừa khó mở rộng tệp khách hàng trẻ, vừa mất nhiều thời gian xác nhận sao kê ngân hàng.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 space-y-1.5">
+              <div class="font-bold text-slate-900 dark:text-white">Mục tiêu kinh doanh (Business Goals):</div>
+              <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+                <li>• Tăng trưởng 40% doanh thu bán lẻ trực tiếp (D2C).</li>
+                <li>• Giảm 80% tỷ lệ sót đơn hàng nhờ hệ thống quản trị tập trung.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 space-y-1.5">
+              <div class="font-bold text-slate-900 dark:text-white">Trải nghiệm số hóa:</div>
+              <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+                <li>• Đặt hàng nhanh 1 trang (One-page Checkout) không bắt buộc tạo tài khoản.</li>
+                <li>• Tích hợp mã VietQR động tự xác thực thanh toán.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: AS-IS vs TO-BE -->
+        <div id="p2-tab-asis" class="case-tab-pane hidden space-y-4">
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-300 font-semibold border-b border-slate-200 dark:border-slate-800">
+                <tr>
+                  <th class="p-3 w-32">Khâu xử lý</th>
+                  <th class="p-3 text-rose-600 dark:text-rose-300">Quy trình cũ (AS-IS)</th>
+                  <th class="p-3 text-teal-600 dark:text-teal-300">Quy trình số hóa (TO-BE)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Nhận đơn</td>
+                  <td class="p-3">Tin nhắn Zalo rải rác; nhân viên ghi sổ tay.</td>
+                  <td class="p-3 text-slate-900 dark:text-slate-100">Khách đặt trên Web; đơn tự động đổ về Dashboard tập trung.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Thanh toán</td>
+                  <td class="p-3">Chụp ảnh sao kê; đối soát thủ công từng dòng.</td>
+                  <td class="p-3 text-slate-900 dark:text-slate-100">Quét mã VietQR động; hệ thống tự động cập nhật trạng thái 'Đã thanh toán'.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Vận chuyển</td>
+                  <td class="p-3">Viết phiếu gửi bưu điện bằng tay; khách không tra cứu được.</td>
+                  <td class="p-3 text-slate-900 dark:text-slate-100">Tích hợp cổng vận chuyển in phiếu tự động và gửi SMS/Email tracking cho khách.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 3: BRD Highlights -->
+        <div id="p2-tab-brd" class="case-tab-pane hidden space-y-3 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="font-bold text-slate-900 dark:text-white">Quy tắc nghiệp vụ (Business Rules) trong BRD:</div>
+            <ul class="space-y-1.5 text-slate-600 dark:text-slate-300 pl-4 list-disc">
+              <li><strong>BR-01:</strong> Miễn phí vận chuyển toàn quốc cho đơn hàng từ 3 chai trở lên.</li>
+              <li><strong>BR-02:</strong> Hệ thống tự động hủy đơn sau 24h nếu khách chọn chuyển khoản nhưng chưa quét mã VietQR.</li>
+              <li><strong>BR-03:</strong> Cảnh báo cho quản kho khi số lượng tồn kho của một phân loại sản phẩm xuống dưới 50 chai.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <a href="https://drive.google.com/drive/folders/1-1cGBe9FQB4aUWKWObhh_9TjrG2nDIIz?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xs text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+          <i data-lucide="folder-symlink" class="w-3.5 h-3.5"></i> Mở folder Drive dự án
+        </a>
+        <button onclick="closeModal('project-2-modal')" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 cursor-pointer">
+          Đóng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: CASE STUDY 3 — ALLEGENS REAL-WORLD IMPROVEMENT                     -->
+  <!-- ========================================================================= -->
+  <div id="project-3-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+    <div class="modal-content modal-enter w-full max-w-4xl max-h-[90vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 rounded-3xl overflow-hidden flex flex-col shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="p-6 bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Case Study Thực Tế: Tối Ưu Quy Trình Tại Allegens</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Kinh nghiệm thực chiến B2B • Chuẩn hóa dữ liệu & Tự động hóa luồng làm việc</p>
+          </div>
+        </div>
+        <button onclick="closeModal('project-3-modal')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-6 text-slate-700 dark:text-slate-300 text-xs sm:text-sm">
+        
+        <!-- Google Drive Direct Link Banner -->
+        <div class="p-4 rounded-2xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="folder-check" class="w-5 h-5 text-teal-600 dark:text-teal-400 shrink-0"></i>
+            <div>
+              <div class="font-bold text-slate-900 dark:text-white">Mẫu biểu quy trình & Bảng theo dõi trên Google Drive</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400">Xem mẫu cấu trúc cây thư mục và cấu trúc file quản lý thanh toán.</div>
+            </div>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1NGdH3uWIufpTV3VHRxWkOGoNp-pWtpaq?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-teal-600 hover:bg-teal-500 text-white shrink-0 shadow-sm">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Mở Trên Google Drive</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+          <div class="p-4 rounded-2xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800">
+            <div class="text-2xl font-bold text-teal-600 dark:text-teal-400">-60%</div>
+            <div class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Thời gian tra cứu chứng từ</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800">
+            <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">+50%</div>
+            <div class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Tỷ lệ đúng hạn tiến độ (SLA)</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800">
+            <div class="text-2xl font-bold text-sky-600 dark:text-sky-400">4 Phòng ban</div>
+            <div class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Được chuẩn hóa luồng chung</div>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider">1. Bài toán thực tế tại doanh nghiệp</h4>
+          <p class="leading-relaxed text-slate-600 dark:text-slate-300">
+            Allegens là công ty thương mại Dược phẩm B2B. Khi tôi mới vào làm, mỗi phòng ban (Sales, Đăng ký thuốc, Xuất nhập khẩu, Kế toán) lưu trữ tài liệu chứng từ (COA, GMP, Hợp đồng) theo cách riêng trên máy tính cá nhân. Khi sếp hoặc đối tác quốc tế cần tra cứu để thẩm định hồ sơ, nhân viên mất hàng giờ để tìm lại file.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider">2. Hành động của tôi (Actions Taken)</h4>
+          
+          <div class="space-y-2.5">
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <div class="font-bold text-slate-900 dark:text-white">Bước 1: Chuẩn hóa cấu trúc thư mục & Quy ước đặt tên file</div>
+              <p class="text-slate-600 dark:text-slate-400 text-xs mt-1">
+                Thiết kế lại cây thư mục tập trung theo cấp: <code>Khách hàng / Mã Hợp đồng / Loại chứng từ (COA, GMP, Invoice)</code>. Thống nhất quy ước đặt tên file chuẩn <code>[YYYYMMDD]_[LoạiChứngTừ]_[TênSảnPhẩm]_[MãLô]</code> giúp tra cứu trong 30 giây.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <div class="font-bold text-slate-900 dark:text-white">Bước 2: Xây dựng Dashboard theo dõi thanh toán tự động (Google Sheets)</div>
+              <p class="text-slate-600 dark:text-slate-400 text-xs mt-1">
+                Thiết lập công thức liên kết dữ liệu tự động giữa bộ phận API và Xuất Nhập Khẩu, tạo cảnh báo màu sắc cho các khoản thanh toán sắp đến hạn (T-3 days) để ban giám đốc luôn có số liệu chính xác.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <div class="font-bold text-slate-900 dark:text-white">Bước 3: Thống nhất checklist bàn giao giữa các phòng ban</div>
+              <p class="text-slate-600 dark:text-slate-400 text-xs mt-1">
+                Lập checklist rõ ràng các điều kiện cần khi chuyển tiếp hồ sơ từ Sales sang Đăng ký thuốc và Xuất Nhập Khẩu, loại bỏ các cuộc họp không cần thiết và nâng tỷ lệ đúng hạn lên 50%.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 text-xs text-slate-700 dark:text-slate-300">
+          <strong class="text-teal-800 dark:text-teal-300">Bài học quý giá:</strong> Dự án này giúp tôi hiểu rằng một BA giỏi không chỉ biết vẽ sơ đồ trên giấy, mà quan trọng nhất là <em>kỹ năng lắng nghe, thấu cảm với khó khăn của người dùng thực tế và kiên nhẫn đồng hành để họ đón nhận quy trình mới</em>.
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <a href="https://drive.google.com/drive/folders/1NGdH3uWIufpTV3VHRxWkOGoNp-pWtpaq?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xs text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+          <i data-lucide="folder-symlink" class="w-3.5 h-3.5"></i> Mở folder Drive dự án
+        </a>
+        <button onclick="closeModal('project-3-modal')" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 cursor-pointer">
+          Đóng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: EXACT HIGH-FIDELITY RESUME & CV (FULL SEAMLESS WHITE SHEET)         -->
+  <!-- ========================================================================= -->
+  <div id="resume-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6">
+    <div class="modal-content modal-enter w-full max-w-4xl max-h-[92vh] bg-white rounded-3xl overflow-hidden flex flex-col shadow-2xl border border-slate-300 dark:border-slate-700">
+      
+      <!-- Top Action Bar (Light Grey Header) -->
+      <div class="p-4 sm:px-6 sm:py-3.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2">
+          <i data-lucide="file-check-2" class="w-4 h-4 text-sky-600"></i>
+          <span class="text-xs sm:text-sm font-bold text-slate-900">Bản CV Chuẩn 1 Trang (Định dạng PDF Gốc)</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <a href="https://drive.google.com/file/d/1i4B7bwTqA4qqu0rJuJ3OPorV4xNv2bpF/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200 hover:bg-sky-100 transition-all">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Tải File Gốc Trên Drive</span>
+          </a>
+
+          <button onclick="window.print()" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white shadow-sm cursor-pointer" title="In hoặc Xuất PDF">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>In / Xuất PDF</span>
+          </button>
+          
+          <button onclick="closeModal('resume-modal')" class="p-1.5 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-200 cursor-pointer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- CV Paper Sheet (Completely Seamless White Paper) -->
+      <div class="p-6 sm:p-10 overflow-y-auto bg-white flex justify-center">
+        
+        <div id="cv-paper-container" class="w-full text-[#1a202c] font-sans text-xs sm:text-[13px] leading-relaxed space-y-6 select-text">
+          
+          <!-- Header Area -->
+          <div class="flex items-start justify-between gap-4 pb-4 border-b-2 border-slate-800">
+            <div class="space-y-1">
+              <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#16304f] uppercase">LY MINH KHOI</h1>
+              <div class="text-sm sm:text-base font-bold text-slate-700">Fresher/Junior Business Analyst</div>
+              <div class="text-[11px] sm:text-xs text-slate-600 pt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                <span>minhkhoily01@gmail.com</span>
+                <span>•</span>
+                <span>0708556236</span>
+                <span>•</span>
+                <span>Ho Chi Minh City, Vietnam</span>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/l%C3%BDminhkh%C3%B4i/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-medium">linkedin.com/in/lýminhkhôi/</a>
+              </div>
+            </div>
+
+            <!-- Portrait Photo in CV -->
+            <div class="w-20 h-24 sm:w-24 sm:h-28 rounded-xl overflow-hidden bg-slate-100 border border-slate-300 shrink-0 shadow-sm">
+              <img src="assets/images/avatar.jpg" onerror="this.src='assets/images/avatar.svg'" alt="Lý Minh Khôi Photo" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- Section: Professional Summary -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
+            <div class="md:col-span-3 font-extrabold text-[11px] sm:text-xs text-slate-900 tracking-wider uppercase">
+              PROFESSIONAL SUMMARY
+            </div>
+            <div class="md:col-span-9 text-slate-700 leading-normal text-[11px] sm:text-xs text-justify">
+              Business Analyst with a distinctive cross-domain background: a Pharmacy degree paired with B2B Sales experience. This combination lets me bridge business and technical teams — understanding what each side truly needs and turning it into clear, actionable requirements. I've standardized processes that cut data retrieval time by 60%, and I'm skilled in BPMN process modeling, User Story writing, SRS/BRD specification, and advanced Excel.
+            </div>
+          </div>
+
+          <hr class="border-slate-200">
+
+          <!-- Section: Core Competencies -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
+            <div class="md:col-span-3 font-extrabold text-[11px] sm:text-xs text-slate-900 tracking-wider uppercase">
+              CORE COMPETENCIES
+            </div>
+            <div class="md:col-span-9 grid grid-cols-2 sm:grid-cols-3 gap-y-1 gap-x-2 text-[11px] sm:text-xs text-slate-700 font-medium">
+              <div>– Use Case / User Story</div>
+              <div>– SRS / BRD Specification</div>
+              <div>– Process Modeling (BPMN)</div>
+              <div>– Process Analysis & Optimization</div>
+              <div>– Stakeholder Management</div>
+              <div>– Jira</div>
+              <div>– Figma</div>
+              <div>– Advanced Excel</div>
+              <div>– Confluence</div>
+            </div>
+          </div>
+
+          <hr class="border-slate-200">
+
+          <!-- Section: Work Experience -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
+            <div class="md:col-span-3 font-extrabold text-[11px] sm:text-xs text-slate-900 tracking-wider uppercase">
+              WORK EXPERIENCE
+            </div>
+            <div class="md:col-span-9 space-y-2 text-[11px] sm:text-xs text-slate-700">
+              <div class="flex flex-wrap items-center justify-between">
+                <strong class="text-slate-900 font-bold">B2B Sales Executive (Process Improvement)</strong>
+                <span class="text-slate-500 font-medium text-[11px]">Mar 2025 – Present</span>
+              </div>
+              <div class="italic text-slate-600 font-medium">Allegens Co., Ltd.</div>
+              <ul class="space-y-1 pl-4 list-disc text-justify">
+                <li>Redesigned the document management system and standardized data organization, cutting information retrieval time by 60%.</li>
+                <li>Built a payment-tracking system on Google Sheets, synchronizing data between the API and Import–Export teams to keep reporting accurate and consistent for management.</li>
+                <li>Standardized team workflows to improve task visibility and cross-department accountability, reducing unnecessary meetings and raising on-time task completion by 50%.</li>
+                <li>Acted as the cross-functional liaison across Sales, Drug Registration, Import–Export, and Customer teams to keep orders on schedule.</li>
+                <li>Communicated confidently across all levels, from specialists and managers to senior directors, and worked directly with international partners during on-site visits.</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="border-slate-200">
+
+          <!-- Section: Business Analyst Projects -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
+            <div class="md:col-span-3 font-extrabold text-[11px] sm:text-xs text-slate-900 tracking-wider uppercase">
+              BUSINESS ANALYST PROJECTS
+            </div>
+            <div class="md:col-span-9 space-y-3 text-[11px] sm:text-xs text-slate-700">
+              
+              <div class="italic text-slate-600 font-medium">
+                Business Analyst Training Program (Hands-on Projects) — Techcamp Co., Ltd. (Apr 2026 – Present)
+              </div>
+
+              <!-- Project 1 -->
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <strong class="text-slate-900 font-bold">Personal Finance Fintech App — “Where Did My Money Go?”</strong>
+                  <span class="text-slate-500 text-[11px]">2026</span>
+                </div>
+                <ul class="space-y-0.5 pl-4 list-disc text-justify">
+                  <li>Conducted market research to define the system’s scope and key stakeholders.</li>
+                  <li>Benchmarked workflows of comparable apps; modeled business processes using BPMN and User Stories.</li>
+                  <li>Authored a complete SRS (functional & non-functional requirements) to guide the development team.</li>
+                </ul>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <strong class="text-slate-900 font-bold">Digital Transformation — Muong Khuong Chili Sauce (OCOP Product)</strong>
+                  <span class="text-slate-500 text-[11px]">2026</span>
+                </div>
+                <ul class="space-y-0.5 pl-4 list-disc text-justify">
+                  <li>Analyzed the existing sales process and proposed a website solution to support digital transformation.</li>
+                  <li>Modeled workflows and designed wireframes for key screens in Figma.</li>
+                  <li>Wrote the BRD, clarified business requirements, and handed off to the design/development team.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <hr class="border-slate-200">
+
+          <!-- Section: Education & Certification -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
+            <div class="md:col-span-3 font-extrabold text-[11px] sm:text-xs text-slate-900 tracking-wider uppercase">
+              EDUCATION
+            </div>
+            <div class="md:col-span-9 space-y-2 text-[11px] sm:text-xs text-slate-700">
+              <div>
+                <strong class="text-slate-900 font-bold">Bachelor of Pharmacy</strong>
+                <div class="italic text-slate-600 font-medium">Nguyen Tat Thanh University</div>
+                <div class="text-slate-600 text-[11px]">2019 – 2024 &nbsp;|&nbsp; <span class="font-semibold text-slate-800">Rank: Very Good (Graduated with Distinction)</span></div>
+              </div>
+
+              <div class="pt-1">
+                <div class="font-bold text-slate-900">English Certification</div>
+                <div class="text-slate-600 text-[11px]">TOEIC > 800 &nbsp;|&nbsp; Oct 2024</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-slate-100 border-t border-slate-200 flex items-center justify-between shrink-0">
+        <a href="https://drive.google.com/drive/folders/1pGYACtoeZAFON5bUItEaHMldVk4rveUv?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-600 hover:underline flex items-center gap-1">
+          <i data-lucide="folder-symlink" class="w-3.5 h-3.5"></i> Mở folder Google Drive của Khôi
+        </a>
+        <button onclick="closeModal('resume-modal')" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-200 text-slate-800 hover:bg-slate-300 cursor-pointer">
+          Đóng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom App JS -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

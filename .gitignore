@@ -1,0 +1,4 @@
+# Agent internal metadata
+.agent/
+.system_generated/
+*.log
