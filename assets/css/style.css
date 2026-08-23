@@ -39,6 +39,22 @@ html.dark {
   --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
+/* Dark Mode Fallback Utilities */
+html.dark .bg-slate-850,
+html.dark .dark\:bg-slate-850 {
+  background-color: #162032 !important;
+}
+
+html.dark .bg-slate-950,
+html.dark .dark\:bg-slate-950 {
+  background-color: #0b0f19 !important;
+}
+
+html.dark .pro-card {
+  background-color: #131b2e !important;
+  border-color: #23304b !important;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: var(--font-main);
