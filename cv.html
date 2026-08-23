@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Lý Minh Khôi - Fresher/Junior Business Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.45;
+      font-size: 11.5px;
+      padding: 20px 0;
+    }
+    .page {
+      background: #ffffff;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 18mm 20mm;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+      }
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 12mm 15mm;
+        box-shadow: none;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    .name-title h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .name-title .job-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .contact-line {
+      margin-top: 6px;
+      font-size: 10.5px;
+      color: #475569;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .contact-line a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    .avatar-box {
+      width: 70px;
+      height: 85px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .avatar-box img {
+      width: 100%;
+      height: 100%;
+      object-cover: cover;
+    }
+    .section {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 12px;
+      margin-bottom: 13px;
+      align-items: start;
+    }
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding-top: 1px;
+    }
+    .section-content {
+      color: #334155;
+    }
+    .summary-text {
+      text-align: justify;
+      color: #334155;
+    }
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px 10px;
+      font-weight: 500;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .job-title-company {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .job-company-name {
+      font-style: italic;
+      color: #64748b;
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+    .job-date {
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 600;
+    }
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 14px;
+      margin-top: 3px;
+      space-y: 2px;
+    }
+    ul.bullet-list li {
+      margin-bottom: 2.5px;
+      text-align: justify;
+    }
+    .divider {
+      border: 0;
+      border-top: 1px solid #e2e8f0;
+      margin: 10px 0;
+    }
+    .print-bar {
+      max-width: 210mm;
+      margin: 0 auto 15px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 12px;
+    }
+    .btn-print {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .btn-print:hover {
+      background: #0369a1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print Toolbar -->
+  <div class="print-bar no-print">
+    <div>
+      <strong>Lý Minh Khôi — CV Bản In A4</strong>
+      <span style="font-size: 11px; color: #94a3b8; margin-left: 8px;">(Tối ưu chuẩn 1 trang PDF)</span>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 12px;">← Về Portfolio</a>
+      <button class="btn-print" onclick="window.print()">In / Xuất File PDF</button>
+    </div>
+  </div>
+
+  <!-- A4 Page Container -->
+  <div class="page">
+    
+    <!-- Header -->
+    <div class="header">
+      <div class="name-title">
+        <h1>LY MINH KHOI</h1>
+        <div class="job-title">Fresher/Junior Business Analyst</div>
+        <div class="contact-line">
+          <span>minhkhoily01@gmail.com</span>
+          <span>•</span>
+          <span>0708 556 236</span>
+          <span>•</span>
+          <span>Ho Chi Minh City, Vietnam</span>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/l%C3%BDminhkh%C3%B4i/" target="_blank">linkedin.com/in/lýminhkhôi/</a>
+        </div>
+      </div>
+      <div class="avatar-box">
+        <img src="assets/images/avatar.jpg" onerror="this.src='assets/images/avatar.svg'" alt="Lý Minh Khôi">
+      </div>
+    </div>
+
+    <!-- Section 1: Professional Summary -->
+    <div class="section">
+      <div class="section-title">PROFESSIONAL SUMMARY</div>
+      <div class="section-content summary-text">
+        Fresher/Junior Business Analyst with a distinctive cross-domain background: a Pharmacy degree (Graduated with Distinction) paired with 2 years of B2B Sales & Process Optimization experience. Skilled in eliciting requirements, standardizing workflows, modeling processes (BPMN 2.0), writing complete SRS/BRD specifications, User Stories (Gherkin format), and building rapid prototypes on Figma & Google Apps Script. Proven track record of cutting document search time by 60% and raising on-time task delivery by 50%.
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 2: Core Competencies -->
+    <div class="section">
+      <div class="section-title">CORE COMPETENCIES</div>
+      <div class="section-content">
+        <div class="competencies-grid">
+          <div>– SRS / BRD Specification</div>
+          <div>– Process Modeling (BPMN 2.0)</div>
+          <div>– Use Case & User Stories (Gherkin)</div>
+          <div>– Gap Analysis (AS-IS vs TO-BE)</div>
+          <div>– Stakeholder Management</div>
+          <div>– Wireframing (Figma / Miro)</div>
+          <div>– Jira / Confluence / Trello</div>
+          <div>– Advanced Excel & Apps Script</div>
+          <div>– English TOEIC > 800</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 3: Work Experience -->
+    <div class="section">
+      <div class="section-title">WORK EXPERIENCE</div>
+      <div class="section-content">
+        <div class="job-header">
+          <span class="job-title-company">B2B Sales Executive (Process Improvement)</span>
+          <span class="job-date">Mar 2025 – Present</span>
+        </div>
+        <div class="job-company-name">Allegens Co., Ltd. — TP. Hồ Chí Minh</div>
+        <ul class="bullet-list">
+          <li><strong>Document System Redesign:</strong> Standardized document taxonomy and naming conventions across Sales, Regulatory Affairs, Logistics, and Accounting, <strong>cutting data retrieval time by 60%</strong> (from 2–4h to <30s).</li>
+          <li><strong>Automated Payment Engine:</strong> Designed automated tracking on Google Sheets linked with Google Apps Script triggers, synchronizing international contract milestones (M0–M9) and payment terms with T-3 deadline alerts.</li>
+          <li><strong>Cross-Department SLA:</strong> Established clear handover checklists between departments, eliminating handoff errors and <strong>raising on-time delivery (SLA) by 50%</strong>.</li>
+          <li><strong>Stakeholder Communication:</strong> Worked directly with senior directors, cross-functional leads, and international suppliers during on-site audit visits.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 4: BA Projects -->
+    <div class="section">
+      <div class="section-title">BUSINESS ANALYST PROJECTS</div>
+      <div class="section-content" style="display: flex; flex-direction: column; gap: 8px;">
+        
+        <div>
+          <div class="job-header">
+            <span class="job-title-company">Personal Finance Fintech App — “Where Did My Money Go?”</span>
+            <span class="job-date">2026</span>
+          </div>
+          <div class="job-company-name">BA Training Program — Techcamp Co., Ltd.</div>
+          <ul class="bullet-list">
+            <li>Elicited user requirements, defined system scope, and mapped stakeholder expectations for 18–35 demographic.</li>
+            <li>Modeled end-to-end BPMN 2.0 workflow for automated budget threshold alerts (80% & 100% cap limits).</li>
+            <li>Authored complete SRS document including Functional/Non-functional specifications and Gherkin User Stories.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="job-header">
+            <span class="job-title-company">Digital Transformation — Muong Khuong Chili Sauce (OCOP E-Commerce)</span>
+            <span class="job-date">2026</span>
+          </div>
+          <div class="job-company-name">BA Training Program — Techcamp Co., Ltd.</div>
+          <ul class="bullet-list">
+            <li>Analyzed AS-IS traditional offline selling process vs. TO-BE automated digital ordering pipeline.</li>
+            <li>Authored comprehensive BRD covering business rules (free shipping, QR validation, stock alert threshold).</li>
+            <li>Designed interactive 1-page checkout wireframes on Figma for seamless UX and payment integration.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Section 5: Education & Certifications -->
+    <div class="section" style="margin-bottom: 0;">
+      <div class="section-title">EDUCATION & CERTIFICATIONS</div>
+      <div class="section-content">
+        <div class="job-header">
+          <span class="job-title-company">Bachelor of Pharmacy (Dược Sĩ Đại Học)</span>
+          <span class="job-date">2019 – 2024</span>
+        </div>
+        <div class="job-company-name">Nguyen Tat Thanh University</div>
+        <div style="font-size: 11px; color: #475569; margin-top: 1px;">
+          • <strong>Academic Rank:</strong> Very Good (Tốt nghiệp loại Giỏi) &nbsp;|&nbsp; <strong>GPA:</strong> 3.48 / 4.0<br>
+          • <strong>English Proficiency:</strong> TOEIC > 800 (Certificate Oct 2024)
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
