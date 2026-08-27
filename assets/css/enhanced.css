@@ -1,0 +1,67 @@
+﻿/* Enhanced Taste & Motion Design Styles */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.06); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.ambient-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+.float-animation {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Glow Hover */
+.pro-card, .project-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+html.dark .pro-card, html.dark .project-card {
+  border-color: rgba(35, 48, 75, 0.8);
+}
+
+.pro-card:hover, .project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+/* Mockup Device Frame */
+.device-frame {
+  background: #0f172a;
+  border-radius: 24px;
+  border: 3px solid #334155;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Tab active indicator */
+.tab-btn.active {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}

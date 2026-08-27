@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Ly Minh Khoi - Junior Business Analyst Portfolio
  * Application Logic & Theme Switcher
  */
