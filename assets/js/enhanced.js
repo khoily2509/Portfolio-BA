@@ -1,11 +1,11 @@
-﻿// Enhanced Motion & Interaction System for Ly Minh Khoi BA Portfolio
+// Professional Motion & Animation Controller for Ly Minh Khoi Portfolio
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 
-  // 2. Animated Number Counters on Scroll
+  // 2. Smooth Animated Number Counters
   const counterElements = document.querySelectorAll('[data-counter]');
   const counterObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = parseFloat(el.getAttribute('data-counter'));
         const prefix = el.getAttribute('data-prefix') || '';
         const suffix = el.getAttribute('data-suffix') || '';
-        const duration = 1400; // ms
+        const duration = 1200; // ms
         
         let startTimestamp = null;
         const step = (timestamp) => {
@@ -51,12 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 4. Tab Switchers for Case Studies
+  // 4. Tab Switchers for Case Study Deliverables
   window.switchProjectTab = function(projectId, tabName) {
     const container = document.getElementById(projectId + '-content-container');
     if (!container) return;
 
-    // Toggle tab panes
     const panes = container.querySelectorAll('.tab-pane');
     panes.forEach(pane => {
       if (pane.getAttribute('data-tab') === tabName) {
@@ -68,17 +67,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Toggle tab buttons
     const btnContainer = document.getElementById(projectId + '-tabs');
     if (btnContainer) {
       const btns = btnContainer.querySelectorAll('.tab-btn');
       btns.forEach(btn => {
         if (btn.getAttribute('data-tab-target') === tabName) {
           btn.classList.add('active', 'bg-sky-600', 'text-white');
-          btn.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+          btn.classList.remove('bg-slate-800', 'text-slate-400');
         } else {
           btn.classList.remove('active', 'bg-sky-600', 'text-white');
-          btn.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+          btn.classList.add('bg-slate-800', 'text-slate-400');
         }
       });
     }
