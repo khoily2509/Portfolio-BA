@@ -1,0 +1,268 @@
+﻿/* UI/UX Pro Max Design System & Typography for Ly Minh Khoi BA Portfolio */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Light Theme Variables */
+html.light {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-focus: #0284c7;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-subtle: #64748b;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --badge-bg: #e0f2fe;
+  --badge-text: #0369a1;
+  --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+}
+
+/* Dark Theme Variables */
+html.dark {
+  --bg-main: #0b0f19;
+  --bg-card: #131b2e;
+  --bg-subtle: #1a243b;
+  --border-color: #23304b;
+  --border-focus: #38bdf8;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --nav-bg: rgba(11, 15, 25, 0.85);
+  --badge-bg: rgba(14, 165, 233, 0.12);
+  --badge-text: #38bdf8;
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Snapshot Card Items (Guaranteed Contrast in Both Themes) */
+.snapshot-item {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.snapshot-item .item-title {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.snapshot-item .item-desc {
+  color: #475569;
+}
+
+html.dark .snapshot-item {
+  background-color: #1a243b !important;
+  border-color: #2b3956 !important;
+}
+
+html.dark .snapshot-item .item-title {
+  color: #ffffff !important;
+}
+
+html.dark .snapshot-item .item-desc {
+  color: #cbd5e1 !important;
+}
+
+/* Card Headers */
+.project-card-header {
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+html.dark .project-card-header {
+  background-color: #162032 !important;
+  border-bottom: 1px solid #23304b !important;
+}
+
+/* Secondary Action Buttons (Google Drive) */
+.btn-secondary-drive {
+  background-color: rgba(226, 232, 240, 0.8);
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+html.dark .btn-secondary-drive {
+  background-color: #1e293b !important;
+  color: #cbd5e1 !important;
+  border-color: #334155 !important;
+}
+html.dark .btn-secondary-drive:hover {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+}
+
+/* Universal Dark Mode Surface & Text Overrides */
+html.dark .bg-slate-50,
+html.dark .bg-slate-100,
+html.dark .bg-slate-200,
+html.dark .bg-slate-850,
+html.dark .dark\:bg-slate-850,
+html.dark .dark\:bg-slate-800 {
+  background-color: #162032 !important;
+}
+
+html.dark .bg-slate-950,
+html.dark .dark\:bg-slate-950 {
+  background-color: #0b0f19 !important;
+}
+
+html.dark .pro-card,
+html.dark .project-card,
+html.dark .modal-content {
+  background-color: #131b2e !important;
+  border-color: #23304b !important;
+}
+
+html.dark thead {
+  background-color: #162032 !important;
+}
+
+html.dark .project-card-header {
+  background-color: #162032 !important;
+  border-bottom-color: #23304b !important;
+}
+
+/* Ensure headings and titles are crisp and bright in dark mode */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark .dark\:text-white {
+  color: #ffffff !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #23304b;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Glass & Card Design */
+.pro-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.dark .pro-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+}
+
+html.light .pro-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.pro-card-hover:hover {
+  transform: translateY(-3px);
+}
+
+html.dark .pro-card-hover:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 12px 30px -8px rgba(2, 132, 199, 0.15);
+}
+
+html.light .pro-card-hover:hover {
+  border-color: rgba(2, 132, 199, 0.4);
+  box-shadow: 0 12px 30px -8px rgba(2, 132, 199, 0.12);
+}
+
+/* Floating Navigation */
+.floating-nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.2s ease;
+}
+
+html.dark .floating-nav {
+  background-color: var(--nav-bg);
+  border: 1px solid var(--border-color);
+}
+
+html.light .floating-nav {
+  background-color: var(--nav-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+}
+
+/* Humanized Gradient Highlights (Subtle & Grounded, not harsh neon) */
+.editorial-title {
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+/* Modals */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
+  transition: all 0.15s cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Toast */
+#toast {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+/* Print Optimization for CV */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
